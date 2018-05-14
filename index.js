@@ -26,10 +26,10 @@ function submitForm(commandMessage) {
         310: function () {document.location.href = "https://www.yandex.ru/"},
         570: function () {console.log('ERROR'); alert(commandMessage.message)},
         605: function () {
-            let wrapper = document.querySelector('.wrapper');
+
             let div = document.createElement('div');
             div.innerHTML = commandMessage.message;
-            wrapper.appendChild(div);
+            document.body.appendChild(div);
         }
 
 
