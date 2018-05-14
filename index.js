@@ -1,6 +1,7 @@
 window.onload = function () {
     let btn = document.querySelector('#btnSub');
     btn.onclick = function () {
+
         let cmd = document.querySelector('#command').value;
         let msg = document.querySelector('#message').value;
         let commandMessage = {
@@ -9,6 +10,8 @@ window.onload = function () {
         };
         console.log(commandMessage);
         submitForm(commandMessage);
+        document.querySelector('#command').value = "";
+        document.querySelector('#message').value = "";
     };
 
 
@@ -27,7 +30,6 @@ function submitForm(commandMessage) {
             let div = document.createElement('div');
             div.innerHTML = commandMessage.message;
             wrapper.appendChild(div);
-
         }
 
 
